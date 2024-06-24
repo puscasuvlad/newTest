@@ -56,6 +56,6 @@ describe('UI Tests', () => {
     cy.get('.CartItem-Qty_isWrapper > .Field > :nth-child(2)').click();
     cy.wait(2000);
     cy.get('.CartOverlay-CheckoutButton').click();
-
+    //commentTest2git
   });
 });
