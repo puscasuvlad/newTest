@@ -42,21 +42,10 @@ describe('UI Tests', () => {
     cy.viewport(1000, 670)
     cy.visit('https://sportland.com/');
     cy.get('.Button-AcceptAll').click();
-    cy.get('.Header-BurgerLogo').click();
+    cy.get('.Header-TopRow-Right > .Header-Menu > .Header-Burger > .Header-BurgerLogo').click();
     cy.get('.MenuPage > .Overlay > .MenuOverlay-Menu > .MenuOverlay-ItemList > :nth-child(1) > .MenuOverlay-SubLevelWrapper').click();
-    cy.wait(2000);
     cy.get('[href="/women"] > .MenuOverlay-ItemFigure > .MenuOverlay-ItemCaption').click();
-    cy.wait(2000);
-    cy.get('.GenderCms-CollectionBanners > p > .ClothesCollection > .ClothesCollection-List > :nth-child(1) > .ClothesCollection-Link > .ClothesCollection-Info > .Button').click();
-    cy.wait(2000);
-    cy.get(':nth-child(2) > .ProductCard-Link > .ProductCard-AdditionalDetails > #productCardFigure > .Image > .Image-Image').click();
-    cy.get('.ProductConfigurableAttributes-SwatchList').find('ProductAttributeValue-String').click()
-    /*cy.get('[href="/product/nike_womens_al8_shoes_fj3794_400?footwear_size=6362"] > .ProductAttributeValue-String').click();
-    cy.get('.AddToCart').click();
-    cy.wait(2000);
-    cy.get('.CartItem-Qty_isWrapper > .Field > :nth-child(2)').click();
-    cy.wait(2000);
-    cy.get('.CartOverlay-CheckoutButton').click();
-    //This is a new test*/
+    cy.get('.GenderCms-CollectionBanners > p > .ClothesCollection > .ClothesCollection-List > :nth-child(1) > .ClothesCollection-Link > .ClothesCollection-Image_desktop').click();
+
   });
 });
